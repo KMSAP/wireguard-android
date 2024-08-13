@@ -1,0 +1,27 @@
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+buildscript {
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.3'
+    }
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+tasks {
+    wrapper {
+        gradleVersion = "6.1"
+        distributionType = Wrapper.DistributionType.ALL
+    }
+}
